@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: fit-content;
+    background-color: #000000;
+    position: relative;
+}
+.footer{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__logo{
+    user-select: none;
+}
+.aaa{
+    color: #FFF;
+    text-decoration: none;
+}
+.footer__logo,.footer__nav{
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 0px;
+    width: fit-content;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-family: 'Agdasima', sans-serif;
+    padding: 1rem;
+}
+.footer__nav{
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+    transform: rotate(270deg);
+    padding: 0rem 1rem;
+    
+    
+}
+.footer__nav::before{
+    content: "|";
+    transition: all 0.25s ;
+}
+.footer__nav::after{
+    content: "|";
+    font-size: 1.6rem;
+    position: relative;
+    left: 6px;
+    top: -6.8px;
+    transition: all 0.25s ;
+    
+}
+.footer__nav.active:after,.footer__nav:focus::after{
+    transform: rotate(-45deg);
+    font-size: 1.5rem;
+    transition: all 0.25s
+}
+/*     */
+.footer__nav.active::before ,.footer__nav:focus::before{
+    transform: rotate(45deg);
+    font-size: 1.5rem;
+    position: relative;
+    right:7px;
+    top: -6.8px;
+    transition: all 0.25s ease-in-out ;
+
+}
+.nav__sittings{
+    z-index: 1;
+    display: block;
+    min-height: 100%;
+    background-color: #000;
+    color:#fff;
+    padding: 5rem 0;
+    position: fixed;
+    width: 100%;
+    transition: all 0.5s;
+    transform: translateX(-10000px);
+    
+}
+.nav__links{
+    width: fit-content;
+    font-family: 'Agdasima', sans-serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+    display: block;
+    color:#fff;
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    transition: all 0.5s;
+    position: relative;
+}
+@keyframes line {
+    0%{width: 0%;}
+    10%{width: 10%;}
+    20%{width: 20%;}
+    30%{width: 30%;}
+    40%{width: 40%;}
+    50%{width: 50%;}
+    60%{width: 60%;}
+    70%{width: 70%;}
+    80%{width: 80%;}
+    90%{width: 90%;}
+    100%{width: 100%;}
+}
+.nav__links:hover::after{
+    content: "";
+    display: block;
+    position:relative;
+    bottom: 16px;
+    border: 3px solid orangered;
+    border-radius: 15px;
+    animation: line 0.25s 1;
+
+}
+.lin{
+    padding: 0rem ;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    padding-left: 2rem;
+    
+}
+.PC{
+    font-family: 'Agdasima', sans-serif;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.PC:hover{
+    color: orangered;
+}
+.socialMedia{
+    font-weight: bolder;
+    text-decoration: none;
+    color: gray;
+    margin: 0 0.5rem;
+}
+.socialMedia:hover{
+    color: orangered;
+}
+.vedio1{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    top: -350px;
+}
+
+.videoH1{
+    color:#FFF ;
+    position: absolute;
+    top: 500px;
+    left: 30px;
+    text-transform: uppercase;
+    font-family: 'Agdasima', sans-serif;
+    font-size: x-large;
+    user-select: none;
+}
+.videoP{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: #FFF;
+    position: relative;
+    left: 30px;
+    user-select: none;
+    bottom:120px;
+}
+.videoP1{
+    font-family: 'Quicksand', sans-serif;
+    bottom: 100px ;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 0.75rem;
+    user-select: none;
+}
+.spanP{
+    user-select: none;
+}
+.spanP:hover{
+    
+    cursor: pointer;
+    color: orangered;
+}
+span{
+    font-weight:900;
+    font-family: 'Quicksand', sans-serif;
+
+}
+.firstVideo{
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+#gradient-overlay{
+    background: linear-gradient(to top , rgba(0, 0, 0, 0.782) , rgba(255, 255, 255, 0));
+    
+    height: 655px;
+    position: absolute;
+    top: 0;
+    width:728px;
+    margin-left:  1rem;
+    margin-right: 0.4rem;
+}
+.careerHighlight{
+    height: 720px;
+    overflow: hidden;
+} 
+.highlightVideo{
+    width: 100%;
+    position: relative;
+    bottom: 325px;
+}
+.box{
+    color: orangered;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: "proxima-nova-condensed","Helvetica",arial,sans-serif;
+    font-weight: 700;
+    height: 755px;
+    border-left: 1px solid rgba(255, 255, 255, 0.434);
+    margin-left: 1rem;
+    position: absolute;
+    padding-top: 100px;
+    top: 655px;
+}
+.sporting{
+    font-weight: bolder;
+    padding-left: 1rem;
+    border-left: 2px solid orangered;
+    border-radius: 1px;
+    padding-bottom: 1rem;
+    position: relative;
+    right: 1px;
+}
+.cr7{
+    color: orangered;
+    font-family: 'Agdasima', sans-serif;
+    letter-spacing: 1px;
+    font-size: 2.25rem ;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+.cr7career{
+    width: 100%;
+    margin-bottom: 100px;
+}
+.subs{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 3rem;
+    background-color: #3333334d;
+    font-family: 'Agdasima', sans-serif;
+    padding-bottom: 6rem;
+}
+.h1{
+
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2rem;
+    padding-top: 7rem;
+    
+    font-size: 2.5rem;
+}
+.p{
+    font-size: 1.25rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2rem;
+}
+.check{
+    position: relative;
+    right: 5px;
+    top: 1px;
+}
+.agree{
+    padding: 1rem;
+    padding-bottom: 3rem;
+    font-size: 1.15rem;
+    color: #fff;
+    text-align: center;
+}
+.pp{
+    
+    color: white;
+}
+.pp:hover{
+    color: orangered;
+}
+.mainContent{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.email,.email__btn{
+    text-align: center;
+    font-family: 'Agdasima', sans-serif;
+    background-color:rgba(245, 245, 245, 0.058) ;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    padding-top:1.5rem ;
+    padding-bottom:1.5rem ;
+    color: #fff;
+    border: 1px solid rgb(255, 255, 255);
+    width: 600px;
+    border-radius: 25px;
+}
+.email__btn{
+    background-color: orangered;
+    border:none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.email__btn:hover{
+    background-color: rgb(219, 58, 0);
+}
+.email:focus{
+    outline: 1px solid orange;
+    border: 1px solid orange;
+}
