@@ -25,5 +25,24 @@ email.addEventListener("click",function(){
 email.addEventListener("blur" ,function(){
   this.style.borderColor = "#ccc"
 })
+    const next = document.querySelector(".next")
+    const before = document.querySelector(".before")
+    const video = document.getElementById("video-container")
+    let currentIndex = 0;
+    function index(){
+        
+    }
+    next.addEventListener("click",function(){
+        if (currentIndex<3)
+        currentIndex++;
+    const translateValue = `translateX(-${currentIndex * 25}%)`
+    video.style.transform=translateValue
+    })
+    before.addEventListener("click",function(){
+        if (currentIndex>0)
+        currentIndex--;
+    const translateValue = `translateX(-${currentIndex*25}%)`
+    video.style.transform=translateValue
+    })
 
 console.log("go one")
