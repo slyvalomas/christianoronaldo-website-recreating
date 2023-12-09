@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            
+
+        }
+        body{
+            min-height: 200vh;
+            overflow-x: hidden;
+        }
+        .wrapper {
+            overflow: hidden;
+        }
+
+        .content{
+            background-color: #000;
+            width: 100%;
+            /* Your existing styles for content */
+        }
+
+        .footer {
+            height: 50px;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            /* Your other styles for the footer */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <!-- Your page content goes here -->
+        </div>
+    </div>
+
+    <footer class="footer">wdwdwdwsdsdsds
+        <!-- Your footer content goes here -->
+    </footer>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .media-scroller {
+      display: flex;
+      white-space: nowrap;
+      gap: 10px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      
+    }
+
+    .media-item {
+      flex: 0 0 auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 200px;
+      height: 150px;
+      cursor: pointer;
+    }
+
+    .media-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<div class="media-scroller" id="mediaScroller">
+  <div class="media-item" onclick="scrollToMedia(0)"><img src="https://placekitten.com/200/150" alt="Kitten 1"></div>
+  <div class="media-item" onclick="scrollToMedia(1)"><img src="https://placekitten.com/201/150" alt="Kitten 2"></div>
+  <div class="media-item" onclick="scrollToMedia(2)"><img src="https://placekitten.com/202/150" alt="Kitten 3"></div>
+  <div class="media-item" onclick="scrollToMedia(0)"><img src="https://placekitten.com/200/150" alt="Kitten 1"></div>
+  <div class="media-item" onclick="scrollToMedia(1)"><img src="https://placekitten.com/201/150" alt="Kitten 2"></div>
+  <div class="media-item" onclick="scrollToMedia(2)"><img src="https://placekitten.com/202/150" alt="Kitten 3"></div>
+
+
+</div>
+
+<script>
+  function scrollToMedia(index) {
+    const mediaScroller = document.getElementById('mediaScroller');
+    const mediaItems = document.querySelectorAll('.media-item');
+    const targetMediaItem = mediaItems[index];
+
+    const scrollLeft = targetMediaItem.offsetLeft - (mediaScroller.offsetWidth - targetMediaItem.offsetWidth) / 2;
+    mediaScroller.scrollTo({
+      left: scrollLeft,
+      behavior: 'smooth'
+    });
+  }
+
+function create() {
+    console.log("Create function");
+}
+
+function soso() {
+    console.log("Soso function");
+}
+
+function blabla() {
+    console.log("Blabla function");
+}
+
+
+const functions = [create, soso, blabla];
+
+
+function callRandomFunction() {
+    const randomIndex = Math.floor(Math.random() * functions.length);
+    const randomFunction = functions[randomIndex];
+    randomFunction();
+}
+
+
+// Example usage
+callRandomFunction();
+
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Carousel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #video-carousel {
+            overflow: hidden;
+        }
+
+        #video-container {
+            display: flex;
+            width: 400%;
+            transition: transform 0.5s ease;
+            cursor: grab;
+            
+        }
+        #video-container:active{
+            cursor:grabbing;
+        }
+
+        .video-wrapper {
+            width: 25%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #nav-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            font-size: 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-between;
+        }
+        .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 4px;
+    }
+
+    .grid-item {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      z-index: 4;
+    }
+
+    .gap {
+      background-color: red; /* Color for the gap */
+    }
+    .grid-container::before {
+        z-index: 0;
+      content: '';
+      width: 100%;
+      position: absolute;
+      top: 459px;
+      width: 300px;
+      height:200px;
+      background:radial-gradient(circle,black,white); /* Color for the gap */
+      z-index: 0;
+    }
+    </style>
+</head>
+<body>
+
+<div id="video-carousel">
+    <div id="video-container">
+        <div class="video-wrapper">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="video4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+<div class="btn">
+    <button class="before">before</button>
+    <button class="next">next</button>
+</div>
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+
+<script>
+    const next = document.querySelector(".next")
+    const before = document.querySelector(".before")
+    const video = document.getElementById("video-container")
+    let currentIndex = 0;
+    video.addEventListener("mouseup", function(){
+        currentIndex++
+        let variable =`translate(-${currentIndex*25}%)`
+        if (currentIndex<3){
+        video.style.transform=variable
+    }
+    })
+    video.addEventListener("mousedown", function(){
+        if (currentIndex>0){
+            currentIndex++
+            let variable =`translate(-${currentIndex*25}%)`
+            video.style.transform=variable
+    }
+    })
+
+</script>
+
+
+
+</body>
+</html> -->

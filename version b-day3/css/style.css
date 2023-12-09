@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    /* overflow-x: hidden; *//*--------------------------------------------------------------------------------------------------------fic here after*/
+    
+}
+.footer{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__logo{
+    user-select: none;
+}
+.aaa{
+    color: #FFF;
+    text-decoration: none;
+}
+.footer__logo,.footer__nav{
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 0px;
+    width: fit-content;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-family: 'Agdasima', sans-serif;
+    padding: 1rem;
+}
+.footer__nav{
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+    transform: rotate(270deg);
+    padding: 0rem 1rem;
+    
+    
+}
+.footer__nav::before{
+    content: "|";
+    transition: all 0.25s ;
+}
+.footer__nav::after{
+    content: "|";
+    font-size: 1.6rem;
+    position: relative;
+    left: 6px;
+    top: -6.8px;
+    transition: all 0.25s ;
+    
+}
+.footer__nav.active:after,.footer__nav:focus::after{
+    transform: rotate(-45deg);
+    font-size: 1.5rem;
+    transition: all 0.25s
+}
+/*     */
+.footer__nav.active::before ,.footer__nav:focus::before{
+    transform: rotate(45deg);
+    font-size: 1.5rem;
+    position: relative;
+    right:7px;
+    top: -6.8px;
+    transition: all 0.25s ease-in-out ;
+
+}
+.nav__sittings{
+    z-index: 1;
+    display: block;
+    min-height: 100%;
+    background-color: #000;
+    color:#fff;
+    padding: 5rem 0;
+    position: fixed;
+    width: 100%;
+    transition: all 0.5s;
+    transform: translateX(-10000px);
+    
+}
+.nav__links{
+    width: fit-content;
+    font-family: 'Agdasima', sans-serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+    display: block;
+    color:#fff;
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    transition: all 0.5s;
+    position: relative;
+}
+@keyframes line {
+    0%{width: 0%;}
+    10%{width: 10%;}
+    20%{width: 20%;}
+    30%{width: 30%;}
+    40%{width: 40%;}
+    50%{width: 50%;}
+    60%{width: 60%;}
+    70%{width: 70%;}
+    80%{width: 80%;}
+    90%{width: 90%;}
+    100%{width: 100%;}
+}
+.nav__links:hover::after{
+    content: "";
+    display: block;
+    position:relative;
+    bottom: 16px;
+    border: 3px solid orangered;
+    border-radius: 15px;
+    animation: line 0.25s 1;
+
+}
+.lin{
+    padding: 0rem ;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    padding-left: 2rem;
+    
+}
+.PC{
+    font-family: 'Agdasima', sans-serif;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.PC:hover{
+    color: orangered;
+}
+.socialMedia{
+    font-weight: bolder;
+    text-decoration: none;
+    color: gray;
+    margin: 0 0.5rem;
+}
+.socialMedia:hover{
+    color: orangered;
+}
+.vedio1{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    top: -350px;
+}
+
+.videoH1{
+    color:#FFF ;
+    position: absolute;
+    top: 500px;
+    left: 30px;
+    text-transform: uppercase;
+    font-family: 'Agdasima', sans-serif;
+    font-size: x-large;
+    user-select: none;
+}
+.videoP{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: #FFF;
+    position: relative;
+    left: 30px;
+    user-select: none;
+    bottom:120px;
+}
+.videoP1{
+    font-family: 'Quicksand', sans-serif;
+    bottom: 100px ;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 0.75rem;
+    user-select: none;
+}
+.spanP{
+    user-select: none;
+}
+.spanP:hover{
+    
+    cursor: pointer;
+    color: orangered;
+}
+span{
+    font-weight:900;
+    font-family: 'Quicksand', sans-serif;
+
+}
+.firstVideo{
+    width: 800px;
+    height: 600px;
+    overflow: hidden; /*--------------------------------------------------------------------------------------------------------fic here after*/
+}
+#gradient-overlay{
+    background: linear-gradient(to top , rgba(0, 0, 0, 0.782) , rgba(255, 255, 255, 0));
+    
+    height: 655px;
+    position: absolute;
+    top: 0;
+    width:728px;
+    margin-left:  1rem;
+    margin-right: 0.4rem;
+}
+.careerHighlight{
+    height: 720px;
+    overflow: hidden;
+} 
+.highlightVideo{
+    width: 100%;
+    position: relative;
+    bottom: 325px;
+}
+.box{
+    color: orangered;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: "proxima-nova-condensed","Helvetica",arial,sans-serif;
+    font-weight: 700;
+    height: 755px;
+    border-left: 1px solid rgba(255, 255, 255, 0.434);
+    margin-left: 1rem;
+    position: absolute;
+    padding-top: 100px;
+    top: 655px;
+}
+.sporting{
+    font-weight: bolder;
+    padding-left: 1rem;
+    border-left: 2px solid orangered;
+    border-radius: 1px;
+    padding-bottom: 1rem;
+    position: relative;
+    right: 1px;
+}
+.cr7{
+    color: orangered;
+    font-family: 'Agdasima', sans-serif;
+    letter-spacing: 1px;
+    font-size: 2.25rem ;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+.cr7career{
+    width: 100%;
+    margin-bottom: 100px;
+}
+.subs{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 3rem;
+    background-color: #3333334d;
+    font-family: 'Agdasima', sans-serif;
+    padding-bottom: 6rem;
+}
+.h1{
+
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2rem;
+    padding-top: 7rem;
+    
+    font-size: 2.5rem;
+}
+.p{
+    font-size: 1.25rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2rem;
+}
+.check{
+    position: relative;
+    right: 5px;
+    top: 1px;
+}
+.agree{
+    padding: 1rem;
+    padding-bottom: 3rem;
+    font-size: 1.15rem;
+    color: #fff;
+    text-align: center;
+}
+.pp{
+    
+    color: white;
+}
+.pp:hover{
+    color: orangered;
+}
+.mainContent{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.email,.email__btn{
+    text-align: center;
+    font-family: 'Agdasima', sans-serif;
+    background-color:rgba(245, 245, 245, 0.058) ;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    padding-top:1.5rem ;
+    padding-bottom:1.5rem ;
+    color: #fff;
+    border: 1px solid rgb(255, 255, 255);
+    width: 600px;
+    border-radius: 25px;
+}
+.email__btn{
+    background-color: orangered;
+    border:none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.email__btn:hover{
+    background-color: rgb(219, 58, 0);
+}
+.email:focus{
+    outline: 1px solid orange;
+    border: 1px solid orange;
+}
+.sc12{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.socialMedia1{
+    margin: 0 0.75rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+.h1believe{
+    padding: 6rem;
+    letter-spacing: 2px;
+    font-size: 1.7rem;
+    text-align: center;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    
+    font-weight: 100;
+}
+.believe{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 600!important;
+}
+.brands{
+    gap: 1px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.brandCR7{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+}
+.brands::before{
+    content: " ";
+    background:radial-gradient(circle ,rgba(255, 103, 31, 0.6) 0%, rgba(0, 0, 0, 0)80%);
+    width: 100%;
+    height:180vh;
+    z-index: -1;
+    position: absolute;
+}
+.gap{
+    background-color: red;
+}
+.aa{
+    padding: 2rem;
+    color: gray;
+    display: flex;
+    justify-content: center;
+}
+.aa:hover{
+    color: whitesmoke;
+}
+.aa1{
+    border-top: 1px solid rgba(128, 128, 128, 0.296);
+    padding-top: 1rem;
+}
+.socialMedia1:hover{
+    filter: brightness(150%);
+}
+.socialMedia:hover{
+    filter:  brightness(80%) 
+}
+.aa1:hover{
+
+    color: gray;
+}
+.divvideo{
+    display: flex; 
+    flex-flow: row;
+}
+
+.highlightssection{
+    width: 600%;
+    display: flex;
+    transition: all 0.5s ;
+}
+.nextPre{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position:relative;
+    bottom: 120px;
+    /* top: 1350px; */
+    width: 100%;
+    padding: 1rem 2rem;
+}
+.next,.prevues{
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 15px;
+    color: silver;
+    width: 150px;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    background-color: #00000000;
+}
+.highlightssection{
+    z-index: -2;
+}
+.box{
+    z-index: -1;
+}
+.highlightVideo{
+    padding-right: 1.5rem;
+    font-family: 'Fjalla One', sans-serif;
+}
+.line{
+    color:whitesmoke ;
+    width: 100%;
+    position: relative;
+    bottom:  250px;
+}
+.sportingl,
+.manu,
+.real,
+.jv,
+.alnasr,
+.portogal{
+    transition: all 0.5s;
+    margin: 0.25rem;
+    width: 16.65%;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.592);
+}
+.sportingl{
+    border-bottom: 1px solid whitesmoke;
+    width:100%;
+}
+
+@keyframes clubsA {
+    0%{transform: translateX(200px) translateY(50px);}
+    10%{transform: translateX(180px) translateY(45px);}
+    20%{transform: translateX(160px) translateY(30px);}
+    30%{transform: translateX(140px) translateY(25px);}
+    40%{transform: translateX(120px) translateY(20px);}
+    50%{transform: translateX(100px) translateY(15px);}
+    60%{transform: translateX(80px) translateY(10px);}
+    70%{transform: translateX(60px) translateY(5px);}
+    80%{transform: translateX(40px) translateY(0);}
+    90%{transform: translateX(20px) translateY(0);}
+    100%{transform: translateX(0px) translateY(0);}
+}
+.clubs{
+    animation: clubsA 0.25s;
+    position: absolute;
+    top:-50px;
+    left: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+
+}
+
+.sectionContainerHighlights{
+    overflow: hidden;
+    z-index: -1;
+}
+/* IBRAHIM.ABDELMOMANE-ETU */
+
+
+
+
+
+
+
+
+

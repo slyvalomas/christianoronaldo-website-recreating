@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Carousel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #video-carousel {
+            overflow: hidden;
+        }
+
+        #video-container {
+            display: flex;
+            width: 400%;
+            transition: transform 0.5s ease;
+            cursor: grab;
+            
+        }
+        #video-container:active{
+            cursor:grabbing;
+        }
+
+        .video-wrapper {
+            width: 25%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #nav-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            font-size: 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<div id="video-carousel">
+    <div id="video-container">
+        <div class="video-wrapper">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="video4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+<div class="btn">
+    <button class="before">before</button>
+    <button class="next">next</button>
+</div>
+
+<script>
+    const next = document.querySelector(".next")
+    const before = document.querySelector(".before")
+    const video = document.getElementById("video-container")
+    let currentIndex = 0;
+    function index(){
+        
+    }
+    next.addEventListener("click",function(){
+        if (currentIndex<3)
+        currentIndex++;
+    const translateValue = `translateX(-${currentIndex * 25}%)`
+    video.style.transform=translateValue
+    })
+    before.addEventListener("click",function(){
+        if (currentIndex>0)
+        currentIndex--;
+    const translateValue = `translateX(-${currentIndex*25}%)`
+    video.style.transform=translateValue
+    })
+</script>
+
+
+
+</body>
+</html>
